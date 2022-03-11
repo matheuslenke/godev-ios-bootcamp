@@ -33,3 +33,21 @@ checkPalindromo(word: "rever")
 checkPalindromo(word: "rir")
 checkPalindromo(word: "godev")
 checkPalindromo(word: "idwall")
+
+func checkPalindromoOtimizado(word: String) -> Bool {
+    let mirroredWord = String(word.reversed()).lowercased().trimmingCharacters(in: .whitespaces)
+    if (mirroredWord == word) {
+        print("A palavra \(word) é um palíndromo!")
+        return true
+    }
+    print("A palavra \(word) não é um palíndromo!")
+    return false
+}
+
+checkPalindromoOtimizado(word: "testando odnatset")
+checkPalindromoOtimizado(word: "ovo")
+checkPalindromoOtimizado(word: "reler")
+checkPalindromoOtimizado(word: "rever")
+checkPalindromoOtimizado(word: "rir")
+checkPalindromoOtimizado(word: "godev")
+checkPalindromoOtimizado(word: "idwall")
