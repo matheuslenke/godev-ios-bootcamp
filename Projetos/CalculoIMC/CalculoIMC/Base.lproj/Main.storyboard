@@ -11,7 +11,6 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculoIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -22,16 +21,10 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundIMC" translatesAutoresizingMaskIntoConstraints="NO" id="2Lj-g4-jaD">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="293" id="5Lb-Cn-Gs4"/>
-                                        </constraints>
                                     </imageView>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WZ2-8S-eHu">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="293"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="293" id="jl2-2S-1Me"/>
-                                        </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cálculo IMC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDb-Ll-7pP">
                                         <rect key="frame" x="105" y="185.5" width="204.5" height="42"/>
@@ -56,9 +49,11 @@
                                     <constraint firstAttribute="trailing" secondItem="WZ2-8S-eHu" secondAttribute="trailing" id="Npa-bR-5mh"/>
                                     <constraint firstAttribute="bottom" secondItem="Ii8-OW-Ggt" secondAttribute="bottom" constant="30" id="QWA-ii-Qh1"/>
                                     <constraint firstAttribute="height" constant="293" id="WSK-lg-SWJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Lj-g4-jaD" secondAttribute="bottom" id="awA-Xo-nr5"/>
                                     <constraint firstItem="Ii8-OW-Ggt" firstAttribute="top" secondItem="zDb-Ll-7pP" secondAttribute="bottom" constant="15" id="cIj-bP-ECt"/>
                                     <constraint firstItem="Ii8-OW-Ggt" firstAttribute="centerX" secondItem="ZMu-lB-Ggw" secondAttribute="centerX" id="nNI-en-SOt"/>
                                     <constraint firstItem="zDb-Ll-7pP" firstAttribute="centerX" secondItem="ZMu-lB-Ggw" secondAttribute="centerX" id="nPh-S3-xDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="WZ2-8S-eHu" secondAttribute="bottom" id="uXa-gM-Kpd"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Alf-Gg-lIp">
@@ -73,7 +68,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-oo-CJ2" userLabel="WeightTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="50,5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzh-oo-CJ2" userLabel="WeightTextField">
                                                 <rect key="frame" x="0.0" y="55" width="167" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="e8E-V4-yhC"/>
@@ -92,7 +87,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-Nh-yVr" userLabel="HeightTextField">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,70" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BUz-Nh-yVr" userLabel="HeightTextField">
                                                 <rect key="frame" x="0.0" y="55" width="167" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="h9K-gz-4MP"/>
@@ -103,6 +98,9 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="IR8-Gc-Qvp"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3z-Ot-NXx">
                                 <rect key="frame" x="30" y="423" width="354" height="45"/>
@@ -137,6 +135,7 @@
                         <outlet property="weightTextField" destination="Kzh-oo-CJ2" id="Q4b-I7-rh5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>

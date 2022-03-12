@@ -29,16 +29,22 @@ class ViewController: UIViewController {
             weight = weight.replacingOccurrences(of: ",", with: ".")
             height = height.replacingOccurrences(of: ",", with: ".")
             
-            guard let heightDouble = Double(height) else { return }
-            guard let weightDouble = Double(weight) else { return }
+            guard let weightDouble = Double(weight) else { errorAlert(message: "Peso vazio!"); return }
+            guard let heightDouble = Double(height) else { errorAlert(message: "Altura vazia!"); return }
             
             let imc = calculateIMC(weight: weightDouble, height: heightDouble)
             
             showResults(imc: imc)
             
         } else {
-            print("Valores vazios")
+            errorAlert(message: "Error na execução")
         }
+    }
+    
+    func errorAlert(message: String) {
+        let alertError = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alertError.addAction(UIAlertAction(title: "Ok", style: .default))
+        present(alertError, animated: true)
     }
     
     func calculateIMC(weight: Double, height: Double) -> Double {
