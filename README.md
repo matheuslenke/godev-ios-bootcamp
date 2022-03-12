@@ -15,3 +15,5 @@ Repositório de código do bootcamp de desenvolvimento iOS go! dev
 **Dia 3:** Conceitos básicos de Swift: Enums, Map, Filter e Reduce. Desafio: Função palíndromo
 
 **Dia 4:** Primeira tela de login com Storyboard. Criando Label, button, imageView e constraints. Desafio de criar um alerta para avisar login ou erro
+
+**Dia 5:** Desafio de IMC realizado
