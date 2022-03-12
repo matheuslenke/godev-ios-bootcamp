@@ -9,23 +9,37 @@ import UIKit
 
 class HomeController: UIViewController {
 
-    let validEmail: String = "matheuslenke@gmail.com"
-    let validPassword: String = "123456"
+    
+    // MARK: - Properties IBOutlet
     
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var authenticatorButton: UIButton!
     
+    // MARK: - Public Properties
+
+    // MARK: - Private Properties
+    private let validEmail: String = "matheuslenke@gmail.com"
+    private let validPassword: String = "123456"
+    
+    // MARK: - Life Cicle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        authenticatorButton.layer.cornerRadius = 10
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
+    
+    // MARK: - IBActions
     
     @IBAction func pressedAuthentication(_ sender: UIButton) {
         if let email = emailTextField.text,
            let password = passwordTextField.text {
             print("Dados informados para autenticar: \(email) \(password)")
-            self.view.endEditing(false)
             if email.isEmpty || password.isEmpty {
                 displayAlert(title: "Falha", message: "Dados vazios!", preferredStyle: .alert)
                 return
@@ -42,6 +56,8 @@ class HomeController: UIViewController {
         }
     }
     
+    // MARK: - Auxiliary functions
+    
     func displayAlert(title: String, message: String, preferredStyle: UIAlertController.Style ) {
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "Confirmar", style: .default))
@@ -54,6 +70,21 @@ class HomeController: UIViewController {
         }
     }
 }
+
+// MARK: - UITextFieldDelegate
+
+extension HomeController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}
+
+// MARK: - String extensions
 
 extension String {
     func isValidEmail() -> Bool {
