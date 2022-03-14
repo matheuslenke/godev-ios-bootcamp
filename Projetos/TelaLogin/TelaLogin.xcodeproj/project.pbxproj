@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8B092BB27DBFC7D0077D58E /* Aula05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aula05.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B092BB27DBFC7D0077D58E /* TelaLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelaLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8B092BE27DBFC7D0077D58E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8B092C027DBFC7D0077D58E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F8B092C227DBFC7D0077D58E /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		F8B092B227DBFC7D0077D58E = {
 			isa = PBXGroup;
 			children = (
-				F8B092BD27DBFC7D0077D58E /* Aula05 */,
+				F8B092BD27DBFC7D0077D58E /* TelaLogin */,
 				F8B092BC27DBFC7D0077D58E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		F8B092BC27DBFC7D0077D58E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8B092BB27DBFC7D0077D58E /* Aula05.app */,
+				F8B092BB27DBFC7D0077D58E /* TelaLogin.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8B092BD27DBFC7D0077D58E /* Aula05 */ = {
+		F8B092BD27DBFC7D0077D58E /* TelaLogin */ = {
 			isa = PBXGroup;
 			children = (
 				F8B092BE27DBFC7D0077D58E /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				F8B092C927DBFC7E0077D58E /* LaunchScreen.storyboard */,
 				F8B092CC27DBFC7E0077D58E /* Info.plist */,
 			);
-			path = Aula05;
+			path = TelaLogin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F8B092BA27DBFC7D0077D58E /* Aula05 */ = {
+		F8B092BA27DBFC7D0077D58E /* TelaLogin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8B092CF27DBFC7E0077D58E /* Build configuration list for PBXNativeTarget "Aula05" */;
+			buildConfigurationList = F8B092CF27DBFC7E0077D58E /* Build configuration list for PBXNativeTarget "TelaLogin" */;
 			buildPhases = (
 				F8B092B727DBFC7D0077D58E /* Sources */,
 				F8B092B827DBFC7D0077D58E /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = Aula05;
+			name = TelaLogin;
 			productName = Aula05;
-			productReference = F8B092BB27DBFC7D0077D58E /* Aula05.app */;
+			productReference = F8B092BB27DBFC7D0077D58E /* TelaLogin.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F8B092B627DBFC7D0077D58E /* Build configuration list for PBXProject "Aula05" */;
+			buildConfigurationList = F8B092B627DBFC7D0077D58E /* Build configuration list for PBXProject "TelaLogin" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8B092BA27DBFC7D0077D58E /* Aula05 */,
+				F8B092BA27DBFC7D0077D58E /* TelaLogin */,
 			);
 		};
 /* End PBXProject section */
@@ -291,7 +291,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473AAT6556;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Aula05/Info.plist;
+				INFOPLIST_FILE = TelaLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tela de Login";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,7 +321,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 473AAT6556;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Aula05/Info.plist;
+				INFOPLIST_FILE = TelaLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tela de Login";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -343,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F8B092B627DBFC7D0077D58E /* Build configuration list for PBXProject "Aula05" */ = {
+		F8B092B627DBFC7D0077D58E /* Build configuration list for PBXProject "TelaLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8B092CD27DBFC7E0077D58E /* Debug */,
@@ -352,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8B092CF27DBFC7E0077D58E /* Build configuration list for PBXNativeTarget "Aula05" */ = {
+		F8B092CF27DBFC7E0077D58E /* Build configuration list for PBXNativeTarget "TelaLogin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F8B092D027DBFC7E0077D58E /* Debug */,
