@@ -17,3 +17,13 @@ Repositório de código do bootcamp de desenvolvimento iOS go! dev
 **Dia 4:** Primeira tela de login com Storyboard. Criando Label, button, imageView e constraints. Desafio de criar um alerta para avisar login ou erro
 
 **Dia 5:** Desafio de IMC realizado
+
+**Dia 6:** Auto layout e Desafio tela de login
+
+**Dia 7:** Table views e collection views
+
+**Dia 8:** Navigation, Tableview Header e Footer
+
+**Dia 9:** TabBar
+
+**Dia 10:** Iniciando com CoreData
