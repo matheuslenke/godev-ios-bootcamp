@@ -27,3 +27,5 @@ Repositório de código do bootcamp de desenvolvimento iOS go! dev
 **Dia 9:** TabBar
 
 **Dia 10:** Iniciando com CoreData
+
+**Dia 11:** Finalizando CoreData e utilizando URLSession para gerar requisições à uma API, criando uma classe Service responsável pela requisição

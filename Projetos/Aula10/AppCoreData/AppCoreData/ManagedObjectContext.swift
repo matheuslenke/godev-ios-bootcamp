@@ -27,6 +27,11 @@ class ManagedObjectContext: managedProtocol, managedSavedProtocol, managedDelete
     
     private let entity = "Users"
     
+    static var shared: ManagedObjectContext = {
+        let instance = ManagedObjectContext()
+        return instance
+    }()
+    
     func getContext() -> NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext
@@ -59,11 +64,50 @@ class ManagedObjectContext: managedProtocol, managedSavedProtocol, managedDelete
         return listPerson
     }
     
-    func delete(uuid: String, onCompletionHandler: (String) -> Void) {
+    func save(person: Person, onCompletionHandler: (String) -> Void) {
+        let context = getContext()
         
+        guard let entity = NSEntityDescription.entity(forEntityName: entity, in: context) else { return }
+        
+        let transaction = NSManagedObject(entity: entity, insertInto: context)
+        
+        transaction.setValue(person.id, forKey: "id")
+        transaction.setValue(person.name, forKey: "name")
+        transaction.setValue(person.lastName, forKey: "lastName")
+        transaction.setValue(person.age, forKey: "age")
+        
+        do {
+            try context.save()
+            
+            onCompletionHandler("Save Success!")
+            
+        } catch let error as NSError {
+            print("Could not save \(error.localizedDescription)")
+        }
     }
     
-    func save(person: Person, onCompletionHandler: (String) -> Void) {
+    func delete(uuid: String, onCompletionHandler: (String) -> Void) {
+        let context = getContext()
+        let predicate = NSPredicate(format: "id == %@", "\(uuid)")
         
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entity)
+        fetchRequest.predicate = predicate
+        
+        do {
+            
+            let fetchResults = try context.fetch(fetchRequest) as! [NSManagedObject]
+            
+            if let entityDelete = fetchResults.first {
+                context.delete(entityDelete)
+            }
+            
+            try context.save()
+            
+            onCompletionHandler("Delete Success!")
+            
+        } catch let error as NSError {
+            print("Fetch failed \(error.localizedDescription)")
+        }
     }
+    
 }
