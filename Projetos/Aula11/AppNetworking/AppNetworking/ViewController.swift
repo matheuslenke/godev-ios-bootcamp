@@ -55,7 +55,6 @@ class ViewController: UIViewController {
             self.loading.stopAnimating()
         }
     }
-    
 }
 
 extension ViewController: UITableViewDelegate {
