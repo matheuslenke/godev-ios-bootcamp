@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum PersonError: Error {
     case urlInvalid
@@ -35,21 +36,10 @@ class ApiService: ServiceProtocol {
         guard let url = URL(string: queryUrl) else { return completion(.failure(.urlInvalid))
         }
         
-        let dataTask = session.dataTask(with: url) { data, _ , _ in
+        AF.request(url, method: .get).validate().responseDecodable(of: PersonList.self) { response in
+            guard let users = response.value else  { return completion(.failure(.noDataAvaliable))}
             
-            do {
-                guard let jsonData = data else { return completion(.failure(.noDataAvaliable)) }
-                
-                let decoder = JSONDecoder()
-                let trackList = try decoder.decode(PersonList.self, from: jsonData)
-                
-                completion(.success(trackList))
-                
-            } catch {
-                completion(.failure(.noProcessData))
-            }
+            completion(.success(users))
         }
-        
-        dataTask.resume()
     }
 }

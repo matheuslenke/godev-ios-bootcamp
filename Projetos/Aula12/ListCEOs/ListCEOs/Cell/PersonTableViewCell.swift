@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PersonTableViewCell: UITableViewCell {
     
@@ -28,10 +29,11 @@ class PersonTableViewCell: UITableViewCell {
         self.profileImageView.layer.masksToBounds = true
     }
     
-    func setup(name: String, company: String, profileImageURL: String) {
-        nameLabel.text = name
-        companyLabel.text = company
-        profileImageView.downloaded(from: profileImageURL)
+    func setup(person: Person) {
+        nameLabel.text = person.name
+        companyLabel.text = person.company.name
+        let url = URL(string: person.photoUrl)
+        profileImageView.kf.setImage(with: url)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

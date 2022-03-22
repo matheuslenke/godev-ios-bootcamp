@@ -85,7 +85,7 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.identifier, for: indexPath) as? PersonTableViewCell else { return UITableViewCell()}
         
         let person = personList[indexPath.row]
-        cell.setup(name: person.name, company: person.company.name, profileImageURL: person.photoUrl)
+        cell.setup(person: person)
         
         return cell
     }

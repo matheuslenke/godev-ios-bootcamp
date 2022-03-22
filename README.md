@@ -29,3 +29,5 @@ Repositório de código do bootcamp de desenvolvimento iOS go! dev
 **Dia 10:** Iniciando com CoreData
 
 **Dia 11:** Finalizando CoreData e utilizando URLSession para gerar requisições à uma API, criando uma classe Service responsável pela requisição
+
+**Dia 12:** Utilização de pods para bibliotecas externas, fazendo request com Alamofire e utilizando KingFisher para cache de imagens
