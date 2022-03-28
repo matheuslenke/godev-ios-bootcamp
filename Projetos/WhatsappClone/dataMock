@@ -1,0 +1,26 @@
+[
+    {
+        "contactName": "Naruto",
+        "avatarUrl": "https://i.pinimg.com/474x/f5/21/12/f521127cfe76995a71fa597160da220d.jpg",
+        "message": "Caramba, você viu aquela aula do Doug? sensacional demais",
+        "sentDate": "19/07/2022"
+    },
+    {
+        "contactName": "Hinata",
+        "avatarUrl": "https://png.pngitem.com/pimgs/s/531-5314702_hyuga-useitforfree-notmine-hinata-animegirl-hinata-profile-hd.png",
+        "message": "Não to conseguindo ver suas mensagens 😡",
+        "sentDate": "19/07/2022"
+    },
+    {
+        "contactName": "Gaara",
+        "avatarUrl": "https://nerdhits.com.br/wp-content/uploads/2021/09/gaara-1-1200x720.jpg",
+        "message": "Esse app que você fez é uma vergonha pra aldeia da folha",
+        "sentDate": "19/07/2022"
+    },
+    {
+        "contactName": "Rock Lee",
+        "avatarUrl": "https://pm1.narvii.com/6280/3ff5da82353a7d4109956348a565dfacc15d80d7_hq.jpg",
+        "message": "Não ta rodando esse app aq",
+        "sentDate": "20/07/2022"
+    }
+]
